@@ -28,6 +28,7 @@ export const userManagementRoute: Routes = [
     data: {
       defaultSort: 'id,asc',
     },
+    outlet: 'users',
   },
   {
     path: ':login/view',

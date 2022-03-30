@@ -7,6 +7,7 @@ import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 import { Authority } from 'app/config/authority.constants';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access.service';
+import { sideRoute } from './layouts/sidebar/sidebar.route';
 
 @NgModule({
   imports: [
@@ -14,10 +15,10 @@ import { UserRouteAccessService } from 'app/core/auth/user-route-access.service'
       [
         {
           path: 'admin',
-          data: {
+          /*   data: {
             authorities: [Authority.ADMIN],
-          },
-          canActivate: [UserRouteAccessService],
+          }, */
+          //canActivate: [UserRouteAccessService],
           loadChildren: () => import('./admin/admin-routing.module').then(m => m.AdminRoutingModule),
         },
         {
@@ -33,6 +34,7 @@ import { UserRouteAccessService } from 'app/core/auth/user-route-access.service'
           loadChildren: () => import(`./entities/entity-routing.module`).then(m => m.EntityRoutingModule),
         },
         navbarRoute,
+        sideRoute,
         ...errorRoute,
       ],
       { enableTracing: DEBUG_INFO_ENABLED }

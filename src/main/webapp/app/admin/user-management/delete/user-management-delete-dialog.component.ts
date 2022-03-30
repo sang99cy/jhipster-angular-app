@@ -9,7 +9,7 @@ import { UserManagementService } from '../service/user-management.service';
   templateUrl: './user-management-delete-dialog.component.html',
 })
 export class UserManagementDeleteDialogComponent {
-  user?: User;
+  /* user?: User;
 
   constructor(private userService: UserManagementService, private activeModal: NgbActiveModal) {}
 
@@ -21,5 +21,5 @@ export class UserManagementDeleteDialogComponent {
     this.userService.delete(login).subscribe(() => {
       this.activeModal.close('deleted');
     });
-  }
+  } */
 }

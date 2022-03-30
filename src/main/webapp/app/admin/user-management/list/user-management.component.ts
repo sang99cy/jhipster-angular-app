@@ -15,8 +15,8 @@ import { UserManagementDeleteDialogComponent } from '../delete/user-management-d
   selector: 'jhi-user-mgmt',
   templateUrl: './user-management.component.html',
 })
-export class UserManagementComponent implements OnInit {
-  currentAccount: Account | null = null;
+export class UserManagementComponent /* implements OnInit  */ {
+  /*  currentAccount: Account | null = null;
   users: User[] | null = null;
   isLoading = false;
   totalItems = 0;
@@ -106,5 +106,5 @@ export class UserManagementComponent implements OnInit {
   private onSuccess(users: User[] | null, headers: HttpHeaders): void {
     this.totalItems = Number(headers.get('X-Total-Count'));
     this.users = users;
-  }
+  } */
 }

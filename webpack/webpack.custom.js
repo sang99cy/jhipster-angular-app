@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const environment = require('./environment');
-const proxyConfig = require('./proxy.conf');
+//const proxyConfig = require('./proxy.conf');
 
 module.exports = async (config, options, targetOptions) => {
   // PLUGINS
@@ -26,9 +26,9 @@ module.exports = async (config, options, targetOptions) => {
 
   // configuring proxy for back end service
   const tls = Boolean(config.devServer && config.devServer.https);
-  if (config.devServer) {
+  /* if (config.devServer) {
     config.devServer.proxy = proxyConfig({ tls });
-  }
+  } */
 
   if (targetOptions.target === 'serve' || config.watch) {
     config.plugins.push(
