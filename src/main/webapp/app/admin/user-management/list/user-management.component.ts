@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpResponse, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { combineLatest } from 'rxjs';
+import { combineLatest, Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/config/pagination.constants';
@@ -10,12 +10,28 @@ import { Account } from 'app/core/auth/account.model';
 import { UserManagementService } from '../service/user-management.service';
 import { User } from '../user-management.model';
 import { UserManagementDeleteDialogComponent } from '../delete/user-management-delete-dialog.component';
+import { ProductService } from '../../../mock/product.service';
+import { Product } from '../../../model/product';
 
 @Component({
   selector: 'jhi-user-mgmt',
   templateUrl: './user-management.component.html',
 })
-export class UserManagementComponent /* implements OnInit  */ {
+export class UserManagementComponent implements OnInit {
+  products!: Product[];
+  constructor(private productService: ProductService) {}
+
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts(): void {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
+      // console.log(this.products)
+    });
+  }
+
   /*  currentAccount: Account | null = null;
   users: User[] | null = null;
   isLoading = false;

@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "productId": "BE01",
+      "productName": "Chiffon shirt",
+      "productPrice": 170,
+      "productStock": 99,
+      "productDescription": "Simple but not boring. With a normal white shirt, with a small pearl adorned like a dewdrop, it creates a new feeling while still retaining the necessary privacy and politeness.",
+      "productIcon": "https://image.voso.vn/users/vosoimage/images/78f2e9e0176e51dd2ec296bdbde33c11?t%5B0%5D=compress%3Alevel%3D100&accessToken=587483b5953bf262803fd54faf803bd833329295310f7d62b6548664b7e4ac75",
+      "productStatus": 0,
+      "categoryType": 0,
+      "createTime": "2020-12-07 22:20:17",
+      "updateTime": "2020-12-16 22:44:16"
+    }
+  ],
+  "users": {
+    "id": 1,
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "name": "admin",
+    "phone": "0332440496",
+    "address": "hà nội",
+    "active": 1,
+    "role": "ROLE_CUSTOMER"
+  }
+}
