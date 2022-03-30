@@ -15,6 +15,7 @@ import { SharedModule } from 'app/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
+import { AdminModule } from './admin/admin.module';
 import { NgbDateDayjsAdapter } from './config/datepicker-adapter';
 import { fontAwesomeIcons } from './config/font-awesome-icons';
 import { httpInterceptorProviders } from 'app/core/interceptor/index';
@@ -32,6 +33,7 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
     HomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     AppRoutingModule,
+    AdminModule,
     // Set this to true to enable service worker (PWA)
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: false }),
     HttpClientModule,
